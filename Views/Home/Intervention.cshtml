@@ -1,0 +1,63 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Intervention Request";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+
+<div style="margin-left:auto;margin-right:auto;">
+    INTERVENTION REQUEST FORM
+</div> 
+
+<form>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="form-group ">
+        <label for="customer_id"> Logged in User : @UserManager.GetUserName(User)</label>
+        <input type="text" id="customer_email" name="customer[email]" value="@UserManager.GetUserName(User)" readonly="">
+    </div>
+}
+  <br>
+
+  <div>
+      <select name="intervention[customer_id]" id="intervention_customer_id">
+        <option value=" + '0' + "> Customer ID </option>
+      </select>
+  </div>
+
+  <div>
+      <select name="intervention[building_id]" id="intervention_building_id">
+        <option value=" + '0' + "> Building </option>
+      </select>
+  </div>
+
+  <br>
+
+  <div>
+      <select name="intervention[battery_id]" id="intervention_battery_id">
+      </select>
+  </div>
+
+  <br>
+
+  <div>
+      <select name="intervention[column_id]" id="intervention_column_id">
+      </select>
+  </div>
+
+  <br>
+
+  <div>
+      <select name="intervention[elevator_id]" id="intervention_elevator_id">
+      </select>
+  </div>
+
+
+
+</form>
+
+
