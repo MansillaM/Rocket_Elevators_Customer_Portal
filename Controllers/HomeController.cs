@@ -25,6 +25,9 @@ public class HomeController : Controller
 
     public IActionResult Intervention()
     {
+        
+
+
         return View();
     }
 

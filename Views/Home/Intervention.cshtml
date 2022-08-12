@@ -12,49 +12,78 @@
     INTERVENTION REQUEST FORM
 </div> 
 
+<br>
+
 <form>
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <div class="form-group ">
-        <label for="customer_id"> Logged in User : @UserManager.GetUserName(User)</label>
+    <div class="form-group">
+        <label for="customer_id"> Logged in User : </label>
         <input type="text" id="customer_email" name="customer[email]" value="@UserManager.GetUserName(User)" readonly="">
     </div>
 }
-  <br>
 
-  <div>
-      <select name="intervention[customer_id]" id="intervention_customer_id">
-        <option value=" + '0' + "> Customer ID </option>
-      </select>
-  </div>
+@* else
+{
+    <div class="form-group ">
+        <label for="customer_id"> Logged in User : </label>
+        <input type="text" id="customer_email" name="customer[email]" value="@UserManager.GetUserName(User)" readonly="">
+    </div>
+} *@
+    <br>
 
-  <div>
-      <select name="intervention[building_id]" id="intervention_building_id">
-        <option value=" + '0' + "> Building </option>
-      </select>
-  </div>
+    <div>
+        <label for="customer"> Customer ID : </label>
+            <select name="intervention[customer_id]" id="intervention_customer_id">
+            </select>
+    </div>
 
-  <br>
+    <br>
 
-  <div>
-      <select name="intervention[battery_id]" id="intervention_battery_id">
-      </select>
-  </div>
+    <div>
+        <label for="building_id"> Building ID : </label>
+            <select name="intervention[building_id]" id="intervention_building_id">
+            </select>
+    </div>
 
-  <br>
+    <br>
 
-  <div>
-      <select name="intervention[column_id]" id="intervention_column_id">
-      </select>
-  </div>
+    <div>
+        <label for="battery_id"> Battery ID : </label>
+            <select name="intervention[battery_id]" id="intervention_battery_id">
+            </select>
+    </div>
 
-  <br>
+    <br>
 
-  <div>
-      <select name="intervention[elevator_id]" id="intervention_elevator_id">
-      </select>
-  </div>
+    <div>
+        <label for="column_id"> Column ID : </label>
+            <select name="intervention[column_id]" id="intervention_column_id">
+            </select>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="elevator_id"> Elevator ID : </label>
+            <select name="intervention[elevator_id]" id="intervention_elevator_id">
+            </select>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="description"> Report : </label>
+            <textarea name="intervention[report]" id="intervention_report" rows="4" cols="50" style="resize: none">
+                </textarea>
+    </div>
+
+    <br>
+
+    <div>
+        <input type="submit" value="Submit">
+    </div>
 
 
 

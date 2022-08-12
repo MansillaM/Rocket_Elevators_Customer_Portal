@@ -15,21 +15,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy  =>
-                      {
-                          policy.WithOrigins(
-                                              "*"
-                                              )
-                                              .WithMethods("POST", "PUT", "DELETE", "GET")
-                                              .WithHeaders("*");
-                      });
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,7 +30,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();;
-app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthorization();
 
 app.MapControllerRoute(
