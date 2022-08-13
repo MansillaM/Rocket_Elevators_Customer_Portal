@@ -1,4 +1,4 @@
-var Url = "https://localhost:8888"
+var Url = "https://rocket-elevators-foundation-op.herokuapp.com"
 
 $(document).ready(function() {
 
@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 })
 
+//ajax call to get customer id to put in building ajax call
 function customerEmail(Email){
     $.ajax({
         url: Url + "/api/customers/" + Email ,
@@ -28,7 +29,7 @@ function customerEmail(Email){
     })
 }
 
-
+//ajax call to populate buildig data
 function getBuildingData(customerID) {
     $.ajax({
         url: Url +"/api/buildings/"+ customerID,
@@ -69,6 +70,7 @@ function getBuildingData(customerID) {
     })
 }
 
+//ajax call to populate battery data
 function getBatteryData(buildingID) {
     $.ajax({
         url: Url +"/api/battery/"+ buildingID,
@@ -107,6 +109,7 @@ function getBatteryData(buildingID) {
     })
 }
 
+//ajax call to populate columns data
 function getColumnData(batterID) {
     $.ajax({
         url: Url +"/api/Columns/"+ batterID,
@@ -138,6 +141,7 @@ function getColumnData(batterID) {
     })
 }
 
+//ajax call to populate elevator data
 function getElevatorData(columnID) {
     $.ajax({
         url: Url + "/api/Elevators/" + columnID,
