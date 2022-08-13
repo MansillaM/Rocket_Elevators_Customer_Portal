@@ -7,7 +7,7 @@ To log in you will need one of these emails
     - tracee@pacocha-towne.io
     - janna.hayes@funk-labadie.co
     - lady@ritchie.com
-    - lorenzo_medhurst@kirlin.biz
+    - nolan.torphy@schmitt.org
   
  For every email the password is : Allo123!
  
