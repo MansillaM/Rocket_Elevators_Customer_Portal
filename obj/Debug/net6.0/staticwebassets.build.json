@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GGN0jkZSOtGjRC+YFwrQo8yLAShoViasfwJboldbtWs=",
+  "Hash": "MItQHzMpQzKu/sGOCSRf91kdC9Dp48vUazxeG6/levU=",
   "Source": "Rocket_Elevators_Customer_Portal",
   "BasePath": "_content/Rocket_Elevators_Customer_Portal",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\matma\\CodeBoxx\\Rocket_Elevators_Customer_Portal\\wwwroot\\js\\product.js",
+      "SourceId": "Rocket_Elevators_Customer_Portal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\matma\\CodeBoxx\\Rocket_Elevators_Customer_Portal\\wwwroot\\",
+      "BasePath": "_content/Rocket_Elevators_Customer_Portal",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\matma\\CodeBoxx\\Rocket_Elevators_Customer_Portal\\wwwroot\\js\\site.js",

@@ -1,3 +1,7 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
 @{
     ViewData["Title"] = "Product Management";
     Layout = "~/Views/Shared/_Layout.cshtml"; 
@@ -7,81 +11,91 @@
     Product Management
 </div> 
 
+<br>
+<br>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="form-group">
+        <label for="customer_idd"></label>
+        <input type="text" id="customer_emaill" name="customer[emaill]" value="@UserManager.GetUserName(User)" readonly="">
+    </div>
+}
+
+<br>
+<br>
+
 <div>
-    <li>Building</li>
-    <li>Battery</li>
-    <li>Column</li>
-    <li>Elevator</li>
+    <h2>
+      <a id="buildingButton"> Building </a>
+    </h2>
 </div>
 
-@* Building *@
-
-<div>
+<div id="buildingData">
   <table>
     <tr>
-      <th>   |   </th>
-      <th>Building ID</th>
-      <th>   |   </th>
-      <th>Address ID</th>
-      <th>   |   </th>
-      <th>Tech Name</th>
-      <th>   |   </th>
-      <th>Tech Phone</th>
-      <th>   |   </th>
+      <th scope="col">Building ID</th>
+      <th scope="col">Address ID</th>
+      <th scope="col">Tech Name</th>
+      <th scope="col">Tech Phone</th>
     </tr>
   </table>
 </div>
 
-@* Battery *@
+<br>
+<br>
 
 <div>
+    <h2>
+      <a id="batteryTag"> Battery </a>
+    </h2>
+</div>
+
+<div id="batteryData">
  <table>
    <tr>
-    <th>   |   </th>
-     <th>Battery ID</th>
-     <th>   |   </th>
-     <th>Building Type</th>
-     <th>   |   </th>
-     <th>Status</th>
-     <th>   |   </th>
-     <th>Employee ID</th>
-     <th>   |   </th>
+     <th scope="col">Battery ID</th>
+     <th scope="col">Building Type</th>
+     <th scope="col">Status</th>
+     <th scope="col">Employee ID</th>
    </tr>
  </table>
 </div>
 
-@* Column *@
+<br>
+<br>
 
 <div>
+    <h2>
+      <a id="columnTag"> Column </a>
+    </h2>
+</div>
+
+<div id="columnData">
   <table>
     <tr>
-      <th>   |   </th>
-      <th>Column ID</th>
-      <th>   |   </th>
-      <th>Floor</th>
-      <th>   |   </th>
-      <th>Status</th>
-      <th>   |   </th>
-      <th>Information</th>
-      <th>   |   </th>
+      <th scope="col">Column ID</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Status</th>
+      <th scope="col">Information</th>
     </tr>
   </table>
 </div>
 
-@* Elevator *@
-
 <div>
+    <h2>
+      <a id="elevatorTag"> Elevator </a>
+    </h2>
+</div>
+
+<div id="elevatorData">
   <table>
     <tr>
-      <th>   |   </th>
-      <th>Elevator ID</th>
-      <th>   |   </th>
-      <th>Serial Number</th>
-      <th>   |   </th>
-      <th>Eleator Status</th>
-      <th>   |   </th>
-      <th>Certificate Number</th>
-      <th>   |   </th>
+      <th scope="col">Elevator ID</th>
+      <th scope="col">Serial Number</th>
+      <th scope="col">Elevator Status</th>
+      <th scope="col">Certificate Number</th>
     </tr>
   </table>
 </div>
+
