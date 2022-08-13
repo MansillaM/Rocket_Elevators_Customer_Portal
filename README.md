@@ -3,11 +3,11 @@
 Welcome to my portal for Rocket Elevator Customers.
 
 To log in you will need one of these emails
-    -sharen_connelly@howell.com
-    -tracee@pacocha-towne.io
-    -janna.hayes@funk-labadie.co
-    -lady@ritchie.com
-    -lorenzo_medhurst@kirlin.biz
+    - sharen_connelly@howell.com
+    - tracee@pacocha-towne.io
+    - janna.hayes@funk-labadie.co
+    - lady@ritchie.com
+    - lorenzo_medhurst@kirlin.biz
   
  For every email the password is : Allo123!
  
