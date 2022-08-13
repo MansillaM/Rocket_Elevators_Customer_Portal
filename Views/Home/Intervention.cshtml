@@ -16,6 +16,8 @@
 
 <form>
 
+@* Show logged in user *@
+
 @if (SignInManager.IsSignedIn(User))
 {
     <div class="form-group">
@@ -23,15 +25,9 @@
         <input type="text" id="customer_email" name="customer[email]" value="@UserManager.GetUserName(User)" readonly="">
     </div>
 }
-
-@* else
-{
-    <div class="form-group ">
-        <label for="customer_id"> Logged in User : </label>
-        <input type="text" id="customer_email" name="customer[email]" value="@UserManager.GetUserName(User)" readonly="">
-    </div>
-} *@
     <br>
+
+@* All the data needed for the intervention request form *@
 
     <div>
         <label for="customer"> Customer ID : </label>
