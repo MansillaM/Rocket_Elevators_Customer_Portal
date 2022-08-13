@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Rocket_Elevators_Customer_Portal.Areas.Identity.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("Rocket_Elevators_Customer_PortalIdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'Rocket_Elevators_Customer_PortalIdentityDbContextConnection' not found.");
 
@@ -24,6 +25,8 @@ var app = builder.Build();
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     // app.UseHsts();
 // }
+
+app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
