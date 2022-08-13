@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 
-var Url = "https://localhost:8888"
+var Url = "https://rocket-elevators-foundation-op.herokuapp.com"
 
 $(document).ready(function() {
 
@@ -185,7 +185,7 @@ function submitForm() {
 
 
     $.ajax({
-        url: Url +"/api/interventions/" + mainAuthorID + "/" + mainCustomerID + "/" + mainBuildingID + "/" + mainBatteryID + "/" + mainColumnID + "/" + mainElevatorID + "/" + mainReport,
+        url: Url + "/api/interventions/" + mainAuthorID + "/" + mainCustomerID + "/" + mainBuildingID + "/" + mainBatteryID + "/" + mainColumnID + "/" + mainElevatorID + "/" + mainReport ,
         type: "post",
         headers: {
             "Accept": "application/json",
