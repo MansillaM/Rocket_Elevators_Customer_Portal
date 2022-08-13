@@ -23,12 +23,14 @@ $(document).ready(function() {
     
 })
 
+//get battery dropdown menu
 $("#intervention_building_id").change(function () {
 
     let selectedBuildingId = $(this).val();
     batteryIdFromBuilding(selectedBuildingId)
 })
 
+//get column dropdown menu
 $("#intervention_battery_id").change(function () {
 
     let selectedBatteryId = $(this).val();
@@ -36,16 +38,19 @@ $("#intervention_battery_id").change(function () {
     
 })
 
+//get elevators
 $("#intervention_column_id").change(function () {
 
     let selectedColumnId = $(this).val();
     elevatorIdEnd(selectedColumnId)
 })
 
+//submit jquery ajax call post method
 $("#submit").click(function () {
     submitForm();
 })
 
+//ajax call to get customer id from email
 function customerIdFromEmail(Email){
     $.ajax({
         url: Url + "/api/customers/" + Email ,
@@ -76,6 +81,7 @@ function customerIdFromEmail(Email){
     })
 }
 
+//ajax call to get building id from customer id
 function buildingIdFromCustomer(customerId){
     $.ajax({
         url: Url +"/api/buildings/"+ customerId,
@@ -95,6 +101,7 @@ function buildingIdFromCustomer(customerId){
     })
 }
 
+//ajax call to get battery id from building id
 function batteryIdFromBuilding(buildingId) {
     $.ajax({
         url: Url +"/api/battery/" + buildingId,
@@ -118,6 +125,7 @@ function batteryIdFromBuilding(buildingId) {
     })
 }
 
+//ajax call to get column id from battery id
 function columnIdForElevator(batteryId) {
     $.ajax({
         url: Url + "/api/Columns/" + batteryId,
@@ -140,6 +148,7 @@ function columnIdForElevator(batteryId) {
     })
 }
 
+//ajax call to get elevators from column id
 function elevatorIdEnd(columnId) {
     $.ajax({
         url: Url + "/api/Elevators/" + columnId,
@@ -162,6 +171,7 @@ function elevatorIdEnd(columnId) {
     })
 }
 
+//ajax call to submit form POST method
 function submitForm() {
 
     let mainAuthorID = $("#intervention_customer_id").val();
