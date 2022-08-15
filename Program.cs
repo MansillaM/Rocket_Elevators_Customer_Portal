@@ -9,6 +9,7 @@ var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
 
 builder.Services.AddDbContext<Rocket_Elevators_Customer_PortalIdentityDbContext>(options =>
     options.UseMySql(connectionString, serverVersion));
+    
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<Rocket_Elevators_Customer_PortalIdentityDbContext>();
